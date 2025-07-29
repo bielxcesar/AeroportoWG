@@ -1,0 +1,55 @@
+=======================================================================================================
+Gabriel Agustin Fernandez RGM: 11231102284 Alves Weslley jesus viena da silva RGM:11231103925
+
+
+Modelo do trabalho Versao 1.0 : começo:(18:20)
+
+    -Iremos usar o Thymeleaf+Spring.
+    -O modelo MVC ja está aplicado.
+    -Conector no Dao está feito.
+    -Vamos implementar o modelos Builder, Factory, singleton, facade.
+
+- Ola gabriel, acabei de testar o back do "voo" ,mas ainda falta testar mais ele...
+o back do passageiro está feito, tbm montei a logica do site para não nos perdemos + falta adicionar 2 tipos de coisa
+para a nota, sendo singleton e facade, após isso acredito que estara joia para focar no front, acredito eu....
+espero que vc nao tenha dor de cabeça com o pagamento pois ainda lhe resta isso para ver.
+fiz minha parte agora e com vc. Boa noite
+
+Termino:(24-05 as Am02:06)
+
+
+================================================================================================================
+Modelo do trabalho Versao 2.0: começo:(13:12)
+
+    -Gof do Voo está funcionando com com um detalhe no atualizar (apenas atualiza dia de ida, dia de vola, hora de ida e
+    hora de volta).
+    -Gof do passageiro está funcionando.
+    -Facade aplicado ja ao Voo e Passageiro com sucesso.
+    -É o Singleton já esta implementado no voo por "Service"(@Service, o Spring Boot já gerencia sua instância
+    automaticamente como um Singleton.).
+    -Liskov Substitution Principle implementado para Voo e Passageiro(significa que qualquer código que espera um
+    Passageiro pode usar PassageiroComum sem precisar de alterações).
+
+
+    -------------EM RESUMO Back com todos os requisitos feito-----------------------
+
+falta o front end e com vc wesley
+
+fim (16:17)
+================================================================================================================
+
+Critérios de avaliação:
+-Aplicação correta e coerente da arquitetura MVC, com separação clara entre Model, View e Controller. (2 pts)(feito)
+
+-Implementação do padrão DAO para manipulação do banco de dados, respeitando boas práticas de encapsulamento e
+abstração. (2 pts) (feito)
+
+-Uso efetivo e adequado dos padrões de projeto GoF indicados, demonstrando entendimento dos problemas que cada
+padrão resolve e das consequências de sua aplicação. (4 pts) (feito)
+
+-Respeito ao Princípio de Substituição de Liskov (Liskov Substitution Principle), garantindo que subclasses possam ser
+usadas no lugar das superclasses sem comprometer o funcionamento da aplicação. (1 pt) (feito)
+
+-Qualidade do código: organização, legibilidade, reutilização, documentação e aderência às boas práticas de
+desenvolvimento orientado a objetos e funcionalidade completa e interface amigável, com testes básicos que comprovem o
+funcionamento dos principais fluxos da aplicação. (1 pt) (feito)

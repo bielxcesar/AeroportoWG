@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>WG Aéreo-Consulta de Voos</title>
+    <link rel="stylesheet" href="css/consultarVoo.css">
+    <link rel="icon" type="image/png" href="Images/aviao.png">
+
+</head>
+<body>
+<button onclick="voltarParaConsultar()" class="btn-retorno">🔙 Voltar para Consultar</button>
+
+<h2>Lista de Voos</h2>
+
+<table border="1">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Saída</th>
+        <th>Destino</th>
+        <th>Hora de Ida</th>
+        <th>Hora de Volta</th>
+        <th>Data de Ida</th>
+        <th>Data de Volta</th>
+        <th>Recadastrar</th>
+    </tr>
+    </thead>
+    <tbody id="tabelaVoo">
+    <!-- Os dados serão inseridos aqui via JavaScript -->
+    </tbody>
+</table>
+<div id="modalBackground" class="modal-background">
+    <div id="modalContainer" class="modal-container">
+        <h2>Remarcar Voo ✈️</h2>
+
+        <!-- Campos bloqueados -->
+        <label>ID:</label>
+        <input type="text" id="modalVooId" disabled>
+        <label>Saída:</label>
+        <input type="text" id="modalSaida" disabled>
+        <label>Destino:</label>
+        <input type="text" id="modalDestino" disabled>
+
+        <!-- Campos editáveis -->
+        <label>Hora de Ida:</label>
+        <input type="text" id="modalHoraIda">
+        <label>Hora de Volta:</label>
+        <input type="text" id="modalHoraVolta">
+        <label>Data de Ida:</label>
+        <input type="date" id="modalDiaIda">
+        <label>Data de Volta:</label>
+        <input type="date" id="modalDiaVolta">
+
+        <!-- Botões -->
+        <button onclick="confirmarAtualizacao()">✅ Confirmar</button>
+        <button onclick="fecharModal()">🔙 Voltar</button>
+    </div>
+</div>
+<script src="js/consultarVoo.js"></script>
+
+</body>
+</html>

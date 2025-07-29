@@ -1,0 +1,64 @@
+create database db_wsAereo;
+use db_wsAereo;
+
+-- ============Tabela de Passageiro============
+create table passageiro (
+	id serial primary key,
+    nome varchar (12)NOT NULL,
+	sobrenome varchar (15)NOT NULL,
+    data_nascimento date NOT NULL,
+    genero varchar(9) NOT NULL,
+    email varchar (30) UNIQUE NOT NULL,
+    celular varchar (11) UNIQUE NOT NULL,
+    cpf varchar (11) UNIQUE NOT NULL
+);
+-- ============Tabela de Pagamento===========
+create table pagamento(
+	id serial primary key,
+    numCartao Varchar (20) NOT NULL,
+    validade date NOT NULL,
+    codSeguranca int NOT NULL,
+    nome varchar (20) NOT NULL,
+    parcela int NOT NULL
+);
+-- ============Tabela de voo============
+create table voo(
+	id serial primary key ,
+    saida varchar (4) NOT NULL,
+    destino varchar (4) NOT NULL,
+    hora_ida varchar (5) Not null,
+    hora_volta varchar (5),
+    dia_ida date NOT NULL,
+    dia_volta date
+);
+-- ============Tabela de Reserva============
+create table reserva (
+    id SERIAL PRIMARY KEY,
+    passageiro_id INT REFERENCES passageiro(id) ON DELETE CASCADE,
+    voo_id INT REFERENCES voo(id) ON DELETE CASCADE,
+    dataReserva TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- ======================Inserts de Tabela================================
+-- ============Insert de Passageiro============
+INSERT INTO passageiro (nome, sobrenome, data_nascimento, genero, email, celular, cpf)
+VALUES 
+('João', 'Silva', '1985-07-15', 'Masculino', 'joao.silva@email.com', '11987654321', '12345678901'),
+('Maria', 'Oliveira', '1992-03-22', 'Feminino', 'maria.oliveira@email.com', '11976543210', '98765432100'),
+('Pedro', 'Santos', '2000-12-10', 'Masculino', 'pedro.santos@email.com', '11999887766', '11223344556');
+select * from passageiro;
+-- ============Insert de pagamento============
+INSERT INTO pagamento (numCartao, validade, codSeguranca, nome, parcela)
+VALUES 
+('1234567812345678', '2026-08-31', '123', 'João Silva', 3),
+('9876543298765432', '2027-05-15', '456', 'Maria Oliveira', 1),
+('5678123456781234', '2028-10-20', '789', 'Pedro Santos', 6);
+select * from pagamento;
+-- ============Insert de voo============
+INSERT INTO voo (saida, destino,hora_ida,hora_volta, dia_ida, dia_volta )
+VALUES 
+('GRU', 'SDU',"12:21","13:12", '2025-06-10', '2025-06-15'), -- Saindo de Guarulhos (GRU) para Santos Dumont (SDU) com volta
+('GIG', 'POA',"15:45",null, '2025-07-20', NULL), -- Saindo do Galeão (GIG) para Porto Alegre (POA) sem volta
+('CNF', 'CWB',"17:12","18:14", '2025-08-05', '2025-08-10'); -- Saindo de Confins (CNF) para Curitiba (CWB) com volta
+select * from voo;
+drop table voo;

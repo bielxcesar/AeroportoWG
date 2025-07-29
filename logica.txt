@@ -1,0 +1,28 @@
+Passageiro
+
+nome
+sobrenome
+data nacimento
+gênero
+email
+celular
+cpf
+
+
+pagamento
+
+numero de cartão
+mês de validade
+ano de validade
+cod. segurança
+nome 
+parcelamento
+
+
+voo
+
+cidade
+dia de ida
+dia de volta (opcional)
+valor
+

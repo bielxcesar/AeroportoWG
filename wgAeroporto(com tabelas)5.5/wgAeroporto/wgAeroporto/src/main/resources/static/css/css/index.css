@@ -1,0 +1,112 @@
+/* Estilos Gerais */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+/* Cabeçalho */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0056b3;
+    padding: 15px 30px;
+    color: white;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    height: 50px;
+    margin-right: 10px;
+}
+
+.slogan {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    margin: 0 15px;
+    padding: 5px 10px;
+    transition: 0.3s;
+}
+
+.nav a:hover {
+    background-color: white;
+    color: #0056b3;
+    border-radius: 5px;
+}
+
+/* Pacotes de Viagem */
+.pacotes {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.pacote {
+    background-color: white;
+    padding: 15px;
+    width: 250px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.pacote img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.pacote h3 {
+    color: #0056b3;
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.pacote p {
+    font-size: 16px;
+    color: #333;
+}
+
+/* Botões de Ação */
+.botoes button {
+    background-color: #ff9800;
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.botoes button:hover {
+    background-color: #e68900;
+}
+.pacote img {
+    width: 100%; /* Mantém a largura ajustada ao contêiner */
+    height: 180px; /* Define uma altura fixa para todas */
+    object-fit: cover; /* Garante que a imagem se ajuste sem distorcer */
+    border-radius: 8px;
+}
+
+/* Rodapé */
+.frase {
+    background-color: #0056b3;
+    color: white;
+    padding: 20px;
+    font-size: 18px;
+}

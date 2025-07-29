@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>WG Aéreo-Consulta de Passageiro</title>
+    <link rel="stylesheet" href="css/consultar.css">
+    <link rel="icon" type="image/png" href="Images/aviao.png">
+</head>
+<body>
+<button onclick="voltarParaIndex()" class="btn-retorno">Voltar para Início</button>
+<h2>Consultar Passageiro por ID</h2>
+
+<input type="text" id="idInput" placeholder="Digite o ID">
+<button id="buscarBtn">Buscar</button>
+
+<table border="1">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Nome</th>
+        <th>Sobrenome</th>
+        <th>Email</th>
+        <th>Celular</th>
+        <th>Data de Nascimento</th>
+        <th>Gênero</th>
+        <th>CPF</th>
+        <th>Deletar</th>
+        <th>Voo</th>
+    </tr>
+    </thead>
+    <tbody id="tabelaPassageiro">
+    <!-- Os dados serão inseridos aqui via JavaScript -->
+    </tbody>
+</table>
+
+<script src="js/consultarPassageiro.js"></script>
+
+</body>
+</html>
